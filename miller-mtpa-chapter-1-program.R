@@ -24,7 +24,7 @@ with(anscombe, print(summary(lm(y4 ~ x4, data = anscombe))))
 # place four plots on one page using standard R graphics
 # ensuring that all have the same scales
 # for horizontal and vertical axes
-pdf(file = "fig_anscombe_R.pdf", width = 8.5, height = 8.5)
+pdf(file = "/Users/harri/OneDrive/Documents/wk4asgn/fig_anscombe_R.pdf", width = 8.5, height = 8.5)
 par(mfrow=c(2,2), mar=c(5.1, 4.1, 4.1, 2.1))
 with(anscombe, plot(x1, y1, xlim=c(2,20), ylim=c(2,14), pch = 19, 
     col = "darkblue", cex = 1.5, las = 1, xlab = "x1", ylab = "y1"))  
