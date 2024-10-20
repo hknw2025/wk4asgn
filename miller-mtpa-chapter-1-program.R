@@ -4,6 +4,8 @@
 # Anscombe, F. J. 1973, February. Graphs in statistical analysis. 
 #  The American Statistician 27: 17–21.
 
+t1 <- Sys.time()
+
 # define the anscombe data frame
 anscombe <- data.frame(
     x1 = c(10, 8, 13, 9, 11, 14, 6, 4, 12, 7, 5),
@@ -20,6 +22,11 @@ with(anscombe, print(summary(lm(y1 ~ x1, data = anscombe))))
 with(anscombe, print(summary(lm(y2 ~ x2, data = anscombe))))
 with(anscombe, print(summary(lm(y3 ~ x3, data = anscombe))))
 with(anscombe, print(summary(lm(y4 ~ x4, data = anscombe))))
+
+t2 = Sys.time()
+
+runtime = t2 - t1
+print(runtime)
 
 # place four plots on one page using standard R graphics
 # ensuring that all have the same scales
